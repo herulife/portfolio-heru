@@ -1,0 +1,13 @@
+# Netlify build config untuk portfolio Next.js Heru Fidiyanto.
+# NODE_VERSION=20 wajib: better-sqlite3 (native module) tidak bisa
+# dikompilasi di Node 22+/26.
+
+[build]
+command = "npm run build"
+publish = ".next"
+
+[build.environment]
+NODE_VERSION = "20"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
